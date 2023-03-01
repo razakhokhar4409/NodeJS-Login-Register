@@ -48,26 +48,20 @@
         <div class="card" style="width: 40rem;">
             <div class="card-body">
                 <form onsubmit=" return false;" id = "form">
-                    <h4>Login</h4>
+                    <h4>UserInfo</h4> 
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" autocomplete="off" required>
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" autocomplete="off" required>
+                        <label for="mobileno" class="form-label">Mobile Number</label>
+                        <input type="text" class="form-control" id="mobileno" name="mobileno" autocomplete="off" required>
                     </div>
                     <div class="alert alert-danger" role="alert" id ="error" style="display: none;"></div>
                     <div class="alert alert-success" role="alert" id = "success" style="display: none;"></div>
 
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary">Add User Info</button>
                 </form>
             </div>
         </div>
     </div>
-    <script src="js/login.js">
-        
+    <script src="js/userinfo.js">
     </script>
 </body>
 

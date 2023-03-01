@@ -9,7 +9,7 @@ const loggedIn = (req,res,next)=>{
             console.log(decoded);
 
             // 2. Check if the user still exist
-            db.query('SELECT * FROM users WHERE id = ?', [decoded.id], (err, results) => {
+            db.query('SELECT * FROM users WHERE id = ?', [decoded['id']], (err, results) => {
                 console.log(results);
                 if (!results) {
                     return next();
