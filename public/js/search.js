@@ -15,7 +15,7 @@
                 {
                     var regular_expression = new RegExp('('+query+')', 'gi');
 
-                    html += '<a href="#" class="list-group-item list-group-item-action" onclick="get_text(this)">'+responseData[count].company_name.replace(regular_expression, '<span class="text-primary fw-bold">$1</span>')+'</a>';
+                    html += '<a href="#" class="list-group-item list-group-item-action" onclick="get_text(this)">'+responseData[count].company_name.replace(regular_expression, '<span class="text-primary fw-bold">$1</span>')+'<br>' +responseData[count].internship_title.replace(regular_expression, '<span class="text-primary fw-bold">$1</span>')+'</a>';
                 }
             }
             else
