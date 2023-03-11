@@ -12,6 +12,7 @@ router.get("/",loggedIn,(req,res)=>{
     }
 })
 
+
 router.get("/register", (req,res)=>{
     res.sendFile("register.html", {root:"./public"});
 })
@@ -21,5 +22,18 @@ router.get("/login", (req,res)=>{
 })
 
 router.get("/logout",logout);
+
+router.get("/userinfo",(req,res)=>{
+      res.sendFile("userinfo.html", {root:"./public"});
+})
+
+router.get("/addinternship", (req,res)=>{
+    res.sendFile("addinternship.html", {root:"./public"});
+})
+
+router.get("/search", (req,res)=>{
+    res.sendFile("search.html", {root:"./public"});
+})
+
 
 module.exports = router;

@@ -17,7 +17,12 @@ const login = async(req,res)=>{
             } else {
                 console.log("else may aya login")
                 const id = results[0].id;
-                const token = jwt.sign({ id }, process.env.JWT_SECRET, {
+                const payload ={
+                    'id': id,
+                    'email':email
+                }
+                console.log("payload isss: "+payload.email)
+                const token = jwt.sign(payload , process.env.JWT_SECRET, {
                     expiresIn: process.env.JWT_EXPIRES_IN
                 });
 
